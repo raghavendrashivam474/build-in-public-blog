@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
+import Link from "next/link";
 
 marked.setOptions({
   breaks: true,
@@ -40,9 +41,9 @@ export default function BlogPost({ params }) {
   return (
     <div className="max-w-3xl mx-auto px-6 py-24">
       {/* 🔙 Back */}
-      <a href="/blog" className="text-blue-500 hover:underline text-sm">
-        ← Back to Blog
-      </a>
+      <Link href="/blog" className="text-blue-500 hover:underline text-sm">
+  ← Back to Blog
+</Link>
 
       {/* 📦 Card Wrapper */}
       <div
